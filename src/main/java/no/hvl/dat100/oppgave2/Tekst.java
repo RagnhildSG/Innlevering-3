@@ -4,7 +4,7 @@ import no.hvl.dat100.common.TODO;
 import no.hvl.dat100.oppgave1.*;
 
 public class Tekst extends Innlegg {
-
+    private String tekst;
 	// TODO: objektvariable 
 	
 	public Tekst () {
@@ -12,16 +12,22 @@ public class Tekst extends Innlegg {
 	}
 	
 	public Tekst(int id, String bruker, String dato, String tekst) {
-		throw new UnsupportedOperationException(TODO.constructor("Tekst"));
+        this.id = id;
+        this.bruker = bruker;
+        this.dato = dato;
+        this.tekst = tekst;
 	}
 	
 	public Tekst(int id, String bruker, String dato, int likes, String tekst) {
-		throw new UnsupportedOperationException(TODO.constructor("Tekst"));
+        this.id = id;
+        this.bruker = bruker;
+        this.dato = dato;
+        this.likes = likes;
+        this.tekst = tekst;
 	}
 	
 	public String getTekst() {
-		throw new UnsupportedOperationException(TODO.method());
-
+        return tekst;
 	}
 
 	public void setTekst(String tekst) {
