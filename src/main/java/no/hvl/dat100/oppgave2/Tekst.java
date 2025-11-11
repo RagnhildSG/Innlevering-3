@@ -17,7 +17,7 @@ public class Tekst extends Innlegg {
 	}
 	
 	public Tekst(int id, String bruker, String dato, int likes, String tekst) {
-        super(id, bruker, dato);
+        super(id, bruker, dato, likes);
         this.tekst = tekst;
 	}
 	
