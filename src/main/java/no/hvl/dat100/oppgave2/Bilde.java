@@ -7,19 +7,12 @@ public class Bilde extends Tekst {
 	// TODO - objekt variable
 	
 	public Bilde(int id, String bruker, String dato, String tekst, String url) {
-        this.id = id;
-        this.bruker = bruker;
-        this.dato = dato;
-        this.tekst = tekst;
+        super(id, bruker, dato, tekst);
         this.url = url;
     }
 
 	public Bilde(int id, String bruker, String dato, int likes, String tekst, String url) {
-        this.id = id;
-        this.bruker = bruker;
-        this.dato = dato;
-        this.likes = likes;
-        this.tekst = tekst;
+        super(id, bruker, dato, likes, tekst);
         this.url = url;
     }
 	
@@ -33,14 +26,14 @@ public class Bilde extends Tekst {
 
 	@Override
 	public String toString() {
-		throw new UnsupportedOperationException(TODO.method ());
-
+        return "BILDE\n" + getId() + "\n" + getBruker() + "\n" + getDato() + "\n" +
+                getLikes() + "\n" + getTekst() + "\n" + url + "\n";
 	}
 
 	// Metoden nedenfor er kun for valgfri oppgave 6
 	public String toHTML() {
-		
-		throw new UnsupportedOperationException(TODO.method());
-				
+        return "<h2>" + getBruker() + "@" + getDato() + " (" + getLikes() + " likes)</h2>\n" +
+                "<p>" + getTekst() + "</p>\n" +
+                "<img src=\"" + url + "\" alt=\"bilde\" />";
 	}
 }
